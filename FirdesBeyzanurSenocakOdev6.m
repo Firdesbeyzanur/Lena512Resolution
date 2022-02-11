@@ -1,0 +1,18 @@
+clc;
+clear all;
+close all;
+I1=imread('lena512.bmp');
+imshow(I1);
+title('I1');
+figure;
+I2 = imresize(I1, 0.5);
+imshow(I2);
+title('I2');
+figure;
+I3=imresize(I1,[1024,1024],'Method','bilinear');
+imshow(I3);
+title('I3');
+figure;
+I4=imresize(I1,[1024,1024],'Method','cubic');
+imshow(I4);
+title('I4');
